@@ -4,7 +4,8 @@ import {action, observable} from 'mobx';
 import Octokat from 'octokat';
 import Events from '../Events/Events';
 
-const octo = Octokat();
+const TOKEN = process.env.TOKEN || null;
+const octo = Octokat({token: TOKEN});
 
 @observer
 export default class App extends React.Component {
