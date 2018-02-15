@@ -9,12 +9,16 @@ export default class Events extends React.Component {
     @observable events = [];
 
     componentWillMount() {
+        this.update();
+    }
+
+    update() {
         this.fetchEvents().then(this.setEvents.bind(this));
     }
 
     async fetchEvents() {
         return this.props.organization.events.fetch().then((events) => {
-            setTimeout(() => this.fetchOrganization().then(this.setOrganization.bind(this)), 30000);
+            setTimeout(this.update.bind(this), 30000);
 
             return events;
         });
