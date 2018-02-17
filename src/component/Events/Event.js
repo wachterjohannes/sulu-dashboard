@@ -7,7 +7,7 @@ export default class Event extends React.Component {
 
         return (
             <li>
-                {event.actor.displayLogin} hat <Moment interval={10000} fromNow locale="de">{event.createdAt}</Moment> ein {event.type} durchgeführt
+                {event.actor.displayLogin} <Moment interval={10000} fromNow locale="en">{event.createdAt}</Moment> {event.type}
             </li>
         );
     }

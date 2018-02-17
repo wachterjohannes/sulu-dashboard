@@ -36,7 +36,7 @@ export default class GithubStore {
 
     async fetchEvents() {
         return this.organization.events.fetch().then((events) => {
-            setTimeout(this.updateEvents.bind(this), 30000);
+            // setTimeout(this.updateEvents.bind(this), 30000);
 
             return events;
         });

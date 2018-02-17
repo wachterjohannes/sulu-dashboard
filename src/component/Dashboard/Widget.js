@@ -1,5 +1,6 @@
 import React from 'react';
 import classNames from 'classnames';
+import Loading from './Loading'
 import WidgetStyles from './widget.scss';
 
 export default class Widget extends React.Component {
@@ -26,14 +27,16 @@ export default class Widget extends React.Component {
 
         return (
             <div style={this.spanStyles} className={className}>
+                {title &&
                 <div className={WidgetStyles.header}>
                     <h2 className={WidgetStyles.title}>{title}</h2>
-                </div>
-                {loading && <span>Loading ...</span>}
+                </div>}
+                {loading && <Loading/>}
 
+                {!loading &&
                 <div className={WidgetStyles.content}>
                     {children}
-                </div>
+                </div>}
             </div>
         );
     }

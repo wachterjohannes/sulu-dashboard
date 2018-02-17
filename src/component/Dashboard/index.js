@@ -1,6 +1,7 @@
 import Dashboard from './Dashboard';
 import Widget from './Widget';
-import Loading from './Loading';
+import ImageWidget from './ImageWidget';
+import NumberWidget from './NumberWidget';
 
-export {Widget, Loading};
+export {Widget, NumberWidget, ImageWidget};
 export default Dashboard;

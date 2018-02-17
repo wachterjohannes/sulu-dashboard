@@ -15,6 +15,7 @@
     line-height: 2;
     display: flex;
     justify-content: space-between;
+    padding-bottom: 1rem;
 }
 
 .title {
@@ -26,5 +27,4 @@
 
 .content {
     grid-area: content;
-    padding-top: 1rem;
 }
