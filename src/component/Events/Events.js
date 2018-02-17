@@ -7,7 +7,7 @@ export default class Events extends React.Component {
             <ul>
                 {this.props.events.items && this.props.events.items.map((event) => {
                     return (
-                        <Event event={event}/>
+                        <Event event={event} key={event.id}/>
                     );
                 })}
             </ul>

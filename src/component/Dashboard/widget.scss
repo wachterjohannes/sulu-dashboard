@@ -1,0 +1,30 @@
+@import '../../containers/App/colors.scss';
+
+.widget {
+    background-color: $fiord;
+    padding: 1rem;
+
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto 1fr;
+    grid-template-areas: "header" "content";
+}
+
+.header {
+    grid-area: header;
+    line-height: 2;
+    display: flex;
+    justify-content: space-between;
+}
+
+.title {
+    font-size: 1.5rem;
+    margin: 0;
+    line-height: 1;
+    text-overflow: ellipsis;
+}
+
+.content {
+    grid-area: content;
+    padding-top: 1rem;
+}
