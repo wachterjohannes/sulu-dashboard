@@ -5,3 +5,8 @@ node_modules
 public/assets
 
 env.js
+
+composer.json
+composer.lock
+deploy.php
+/vendor/

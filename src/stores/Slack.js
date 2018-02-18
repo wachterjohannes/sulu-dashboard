@@ -13,8 +13,14 @@ export default class SlackStore {
     constructor(token) {
         this.token = token;
 
+        this.update();
+    }
+
+    update() {
         this.fetchMessages().then(this.setMessages.bind(this));
         this.fetchUsers().then(this.setUsers.bind(this));
+
+        setTimeout(this.update.bind(this), 3600000)
     }
 
     fetchMessages() {
