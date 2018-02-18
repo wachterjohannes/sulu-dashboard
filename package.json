@@ -3,7 +3,7 @@
     "version": "1.0.0",
     "main": "src/index.js",
     "scripts": {
-        "build": "webpack -p --define process.env.NODE_ENV='\"production\"' --progress --colors",
+        "build": "webpack -p --progress --colors",
         "watch": "webpack -w",
         "serve": "http-server public"
     },

@@ -2,6 +2,18 @@ var webpack = require('webpack');
 var path = require('path');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
+var env = 'development';
+var plugins = [new ExtractTextPlugin('bundle.css')];
+if (process.env.npm_lifecycle_event === 'build') {
+    env = 'production';
+    plugins.push(new webpack.optimize.UglifyJsPlugin());
+}
+plugins.push(new webpack.DefinePlugin({
+    'process.env': {
+        'NODE_ENV': JSON.stringify(env),
+    }
+}));
+
 module.exports = {
     devtool: 'eval',
     entry: [
@@ -13,9 +25,7 @@ module.exports = {
         filename: 'bundle.js',
         publicPath: '/static/'
     },
-    plugins: [
-        new ExtractTextPlugin('bundle.css'),
-    ],
+    plugins: plugins,
     resolve: {
         extensions: ['.js', '.jsx']
     },
