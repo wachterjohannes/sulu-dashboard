@@ -7,7 +7,7 @@ import App from './containers/App';
 
 render(
     <div>
-        <DevTools/>
+        {process.env.NODE_ENV !== 'production' && <DevTools/>}
         <App/>
     </div>,
     document.getElementById('root')
