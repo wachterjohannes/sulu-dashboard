@@ -19,6 +19,7 @@ export default class App extends React.Component {
                     <NumberWidget title="Repositories" colspan={1} value={organization.publicRepos}/>
                     <NumberWidget title="Open Issues" colspan={1} value={githubStore.openIssues}/>
                     <NumberWidget title="Stars" colspan={1} value={githubStore.stargazers}/>
+                    <NumberWidget title="Forks" colspan={1} value={githubStore.forks}/>
 
                     <Widget title="Events" loading={!githubStore.events} colspan={2} rowspan={2}>
                         {githubStore.events && <Events events={githubStore.events}/>}

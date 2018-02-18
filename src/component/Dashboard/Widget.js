@@ -9,10 +9,10 @@ export default class Widget extends React.Component {
 
         // Create inline styles to make grid elements span multiple rows/columns
         this.spanStyles = {};
-        if (props.colspan !== 1) {
+        if (props.colspan || props.colspan !== 1) {
             this.spanStyles.gridColumn = `span ${props.colspan || 1}`;
         }
-        if (props.rowspan !== 1) {
+        if (props.rowspan || props.rowspan !== 1) {
             this.spanStyles.gridRow = `span ${props.rowspan || 1}`;
         }
     }

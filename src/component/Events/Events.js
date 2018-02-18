@@ -4,13 +4,13 @@ import Event from './Event';
 export default class Events extends React.Component {
     render() {
         return (
-            <ul>
+            <div>
                 {this.props.events.items && this.props.events.items.map((event) => {
                     return (
                         <Event event={event} key={event.id}/>
                     );
                 })}
-            </ul>
+            </div>
         );
     }
 }
