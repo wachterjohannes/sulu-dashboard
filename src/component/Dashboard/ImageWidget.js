@@ -13,7 +13,7 @@ export default class ImageWidget extends React.Component {
         } = this.props;
 
         return (
-            <Widget loading={loading} title={title} colspan={colspan} rowpan={rowspan}>
+            <Widget loading={loading} title={title} colspan={colspan} rowspan={rowspan}>
                 <img src={image} className={ImageWidgetStyles.image}/>
             </Widget>
         );

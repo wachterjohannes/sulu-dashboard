@@ -37,7 +37,7 @@ export default class GithubStore {
     }
 
     async fetchEvents() {
-        return this.organization.events.fetch();
+        return this.organization.events.fetch({per_page: 15});
     }
 
     @action
